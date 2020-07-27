@@ -12,5 +12,7 @@ app.listen(port, () => {
     console.log('Stock app listening on port ' + port);
 });
 
-app.get('/getQuote', getRoute.getPrice);
-
+app.get('/getQuote', getRoute.requestPrice);
+app.get('/getEPS', getRoute.requestEPS);
+app.get('/getPE', getRoute.requestPE);
+app.get('/getPriceTarget', getRoute.requestPriceTarget);
