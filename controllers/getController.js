@@ -96,7 +96,7 @@ var controller = {
         return response.json();
     },
 
-    requestPriceTarget: (res, req, next) => {
+    requestPriceTarget: async (res, req, next) => {
         let priceTarget = await controller.getPriceTarget(symbol);
         res.status(200).json(priceTarget);
     }
